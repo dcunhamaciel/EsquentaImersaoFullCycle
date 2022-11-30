@@ -23,3 +23,10 @@ services:
     image: redis:alpine
     ports:
       - 6379:6379
+
+  goapp:
+    build: goapp/
+    ports:
+      - 8081:8081
+    volumes:
+      - ./goapp:/go/src/app
